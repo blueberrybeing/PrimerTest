@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:03.Generic_algorithm/03.Generic_algorithm.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:02.SmartPointer/02.SmartPointer.xcodeproj">
    </FileRef>
    <FileRef

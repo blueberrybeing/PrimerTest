@@ -27,6 +27,45 @@ struct planet {
 int main(int argc, const char * argv[]) {
     using namespace std;
     
+    //cout
+    //1.输出和指针
+    /**
+     const signed char*
+     const unsigned char*
+     const char*
+     void*
+     **/
+    
+//    char name[10] = "fuckyou";
+//    const char* pn = "holy shit";
+//    cout << name << endl;
+//    cout << pn << endl;
+//    cout << (void*)pn << endl;
+//    
+//    //2.其他ostream输出方法
+//    //basic_ostream& put(char_type __c);
+//    cout.put('a')<< endl;;
+//    
+//    //basic_ostream& write(const char_type* __s, streamsize __n);
+//    const char* s1 = "fuck123";
+//    const char* s2 = "shit456";
+//    const char* s3 = "nbat789";
+//    auto len = strlen(s2);
+//    
+//    decltype(len) i;
+//    
+//    for (i = 1; i != len+1; ++i) {
+//        cout.write(s2, i) << endl;
+//    }
+//    cout << "^^^^^^^^^^^^----------" << endl;
+//    for (i = len; i != 0; --i) {
+//        cout.write(s2, i) << endl;
+//    }
+//    
+//    cout << "Exceeding string length" << endl;
+//    cout.write(s2, len+ 5);
+//    cout << s1 << endl << s3 << endl;
+    
     //    //basic_ostream& write(const char_type* __s, streamsize __n);
     //    const char * state1 = "Florida";
     //    const char * state2 = "Kansas";
