@@ -7,6 +7,8 @@
 //
 
 #include <iostream>
+#include "StrBlob.hpp"
+
 class Report
 {
 public:
@@ -44,20 +46,33 @@ int main(int argc, const char * argv[])
     //        ps->comment();
     //    }
     
-    auto_ptr<string> films[5] = {
-        auto_ptr<string> (new string("卡卡西")),
-        auto_ptr<string> (new string("佐助")),
-        auto_ptr<string> (new string("宇智波鼬")),
-        auto_ptr<string> (new string("凯")),
-        auto_ptr<string> (new string("宁次"))
-    };
-    auto_ptr<string> pwin;
-    pwin = films[2];
+//    auto_ptr<string> films[5] = {
+//        auto_ptr<string> (new string("卡卡西")),
+//        auto_ptr<string> (new string("佐助")),
+//        auto_ptr<string> (new string("宇智波鼬")),
+//        auto_ptr<string> (new string("凯")),
+//        auto_ptr<string> (new string("宁次"))
+//    };
+//    auto_ptr<string> pwin;
+//    pwin = films[2];
+//    
+//    for (int i = 0; i < 5; i++) {
+//        cout << *films[i] << endl;
+//    }
+//    cout << *pwin << endl;
+//    cin.get();
     
-    for (int i = 0; i < 5; i++) {
-        cout << *films[i] << endl;
+    StrBlob b;
+    {
+    StrBlob a{"fuck","shit","holy"};
+    
+    b = a;
     }
-    cout << *pwin << endl;
-    cin.get();
+    //std::cout << a.data.use_count() << endl;
+    std::cout << "fuck " << endl;
+    
+    
+    
+    
     return 0;
 }

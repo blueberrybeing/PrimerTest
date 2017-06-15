@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A322FEDB1EF2DD6900E73AE4 /* StrBlob.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A322FED91EF2DD6900E73AE4 /* StrBlob.cpp */; };
 		CC93C6521EF14B8E006B4D54 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC93C6511EF14B8E006B4D54 /* main.cpp */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A322FED91EF2DD6900E73AE4 /* StrBlob.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StrBlob.cpp; sourceTree = "<group>"; };
+		A322FEDA1EF2DD6900E73AE4 /* StrBlob.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = StrBlob.hpp; sourceTree = "<group>"; };
 		CC93C64E1EF14B8E006B4D54 /* 02.SmartPointer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = 02.SmartPointer; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC93C6511EF14B8E006B4D54 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				CC93C6511EF14B8E006B4D54 /* main.cpp */,
+				A322FED91EF2DD6900E73AE4 /* StrBlob.cpp */,
+				A322FEDA1EF2DD6900E73AE4 /* StrBlob.hpp */,
 			);
 			path = 02.SmartPointer;
 			sourceTree = "<group>";
@@ -119,6 +124,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A322FEDB1EF2DD6900E73AE4 /* StrBlob.cpp in Sources */,
 				CC93C6521EF14B8E006B4D54 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,6 +254,7 @@
 				CC93C6571EF14B8E006B4D54 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
