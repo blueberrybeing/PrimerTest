@@ -125,17 +125,17 @@ int main(int argc, const char * argv[]) {
     //        cout << i * i << ":\n";
     //    }
     
-    //    cout << std::right << std::fixed;
-    //    cout << std::setw(6) << "N" << std::setw(14) << "square root"
-    //    << std::setw(15) << "fourth root\n";
-    //    double root;
-    //    for (int n = 10; n <= 100; n += 10) {
-    //        root = sqrt(double(n));
-    //        cout << setw(6) << setfill('.') << n << setfill(' ')
-    //        << setw(12) << setprecision(3) << root
-    //        << setw(14) << setprecision(4) << sqrt(root)
-    //        << endl;
-    //    }
+        cout << std::right << std::fixed;
+        cout << std::setw(6) << "N" << std::setw(14) << "square root"
+        << std::setw(15) << "fourth root\n";
+        double root;
+        for (int n = 10; n <= 100; n += 10) {
+            root = sqrt(double(n));
+            cout << setw(6) << setfill('.') << n << setfill(' ')
+            << setw(12) << setprecision(3) << root
+            << setw(14) << setprecision(4) << sqrt(root)
+            << endl;
+        }
     //    int input;
     //    int sum = 0;
     //    while (cin >> input) {
@@ -219,61 +219,61 @@ int main(int argc, const char * argv[]) {
     //    cout << "Done.\n";
     
     /*binary*/
-    const char* planetData = "planets.dat";
-    planet p1;
-    cout << fixed << right;
-    
-    ifstream fin;
-    fin.open(planetData, ios_base::in | ios_base::binary);
-    if (fin.is_open()) {
-        cout << "Here are the current contents of the " << planetData
-        << " file:\n";
-        while (fin.read((char*)&p1, sizeof(p1))) {
-            cout << setw(20) << p1.name << ": "
-            << setprecision(0) << setw(12) << p1.population
-            << setprecision(2) << setw(6) << p1.g << endl;
-        }
-        fin.close();
-    }
-    
-    // add new data
-    ofstream fout(planetData, ios_base::out | ios::app | ios_base::binary);
-    if (!fout.is_open()) {
-        cerr << "Can't open " << planetData << " file for output:\n";
-        exit(EXIT_FAILURE);
-    }
-    
-    cout << "Enter planet name (enter a blank line to quit):\n";
-    cin.get(p1.name, 20);
-    while (p1.name[0] != '\0') {
-        eatline();
-        cout << "Enter planet population:";
-        cin >> p1.population;
-        cout << "Enter planet's acceleration of gravity:";
-        cin >> p1.g;
-        eatline();
-        fout.write((char*)&p1, sizeof(p1));
-        
-        cout << "Enter planet name (enter a blank line to quit):\n";
-        cin.get(p1.name, 20);
-    }
-    fout.close();
-    
-    //show revised file
-    fin.clear();
-    fin.open(planetData, ios_base::in | ios_base::binary);
-    if (fin.is_open()) {
-        cout << "Here are the current contents of the " << planetData
-        << " file:\n";
-        while (fin.read((char*)&p1, sizeof(p1))) {
-            cout << setw(20) << p1.name << ": "
-            << setprecision(0) << setw(12) << p1.population
-            << setprecision(2) << setw(6) << p1.g << endl;
-        }
-        fin.close();
-    }
-    
-    cout << "Done.\n";
+//    const char* planetData = "planets.dat";
+//    planet p1;
+//    cout << fixed << right;
+//    
+//    ifstream fin;
+//    fin.open(planetData, ios_base::in | ios_base::binary);
+//    if (fin.is_open()) {
+//        cout << "Here are the current contents of the " << planetData
+//        << " file:\n";
+//        while (fin.read((char*)&p1, sizeof(p1))) {
+//            cout << setw(20) << p1.name << ": "
+//            << setprecision(0) << setw(12) << p1.population
+//            << setprecision(2) << setw(6) << p1.g << endl;
+//        }
+//        fin.close();
+//    }
+//    
+//    // add new data
+//    ofstream fout(planetData, ios_base::out | ios::app | ios_base::binary);
+//    if (!fout.is_open()) {
+//        cerr << "Can't open " << planetData << " file for output:\n";
+//        exit(EXIT_FAILURE);
+//    }
+//    
+//    cout << "Enter planet name (enter a blank line to quit):\n";
+//    cin.get(p1.name, 20);
+//    while (p1.name[0] != '\0') {
+//        eatline();
+//        cout << "Enter planet population:";
+//        cin >> p1.population;
+//        cout << "Enter planet's acceleration of gravity:";
+//        cin >> p1.g;
+//        eatline();
+//        fout.write((char*)&p1, sizeof(p1));
+//        
+//        cout << "Enter planet name (enter a blank line to quit):\n";
+//        cin.get(p1.name, 20);
+//    }
+//    fout.close();
+//    
+//    //show revised file
+//    fin.clear();
+//    fin.open(planetData, ios_base::in | ios_base::binary);
+//    if (fin.is_open()) {
+//        cout << "Here are the current contents of the " << planetData
+//        << " file:\n";
+//        while (fin.read((char*)&p1, sizeof(p1))) {
+//            cout << setw(20) << p1.name << ": "
+//            << setprecision(0) << setw(12) << p1.population
+//            << setprecision(2) << setw(6) << p1.g << endl;
+//        }
+//        fin.close();
+//    }
+//    
+//    cout << "Done.\n";
     
     return 0;
 }
