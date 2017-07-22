@@ -21,3 +21,13 @@ BACKUP.[0-9][0-9][0-9]	以"BACKUP."开头，并紧接着3个数字的文件
 [[:upper:]]*	以大写字母开头的文件
 [![:digit:]]*	不以数字开头的文件
 *[[:lower:]123]	文件名以小写字母结尾，或以 “1”，“2”，或 “3” 结尾的文件
+
+以下例子是无引用，双引号，和单引号的比较结
+jj@jjUbuntu:~/Documents/pics$ echo text ~/Documents/*.txt {a,b} $(echo foo) $((2+2)) $USER
+text /home/jj/Documents/ls-out.txt a b foo 4 jj
+jj@jjUbuntu:~/Documents/pics$ echo "text ~/Documents/*.txt {a,b} $(echo foo) $((2+2)) $USER"
+text ~/Documents/*.txt {a,b} foo 4 jj
+jj@jjUbuntu:~/Documents/pics$ echo 'text ~/Documents/*.txt {a,b} $(echo foo) $((2+2)) $USER'
+text ~/Documents/*.txt {a,b} $(echo foo) $((2+2)) $USER
+
+
