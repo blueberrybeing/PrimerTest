@@ -1,0 +1,35 @@
+#!/bin/sh -x
+test_file() {
+        
+	local FILE=/home/jj/Documents/PrimerTest/shell/sys_info_page
+	if [ -e "$FILE" ] ; then
+		if [ -f "$FILE" ] ; then
+			echo "$FILE is a regular file."
+		else
+			echo "fuck shit ---"
+		fi
+		
+		if [ -d "$FILE" ]; then
+			echo "$FILE is a directory."
+		fi
+
+		if [ -r "$FILE" ]; then
+			echo "$FILE is readable."
+		fi
+
+		if [ -w "$FILE" ]; then
+			echo "$FILE is writable."
+		fi
+
+		if [ -x "$FILE" ]; then
+			echo "$FILE is executable/searchable."
+		fi
+	else
+		echo "shit"
+        echo "$FILE doses not exist"
+        return 1
+	fi
+}
+
+
+test_file
