@@ -19,6 +19,14 @@ until [ "$number" -ge 10 ]; do
 done
 
 #Building A Menu
+
+press_enter()
+{
+	echo -en "\npress Enter to contiue"
+	read
+	clear
+}
+
 selection=
 until [ $"selection" = "0" ]; do
 	echo "
@@ -31,9 +39,9 @@ until [ $"selection" = "0" ]; do
 	read selection
 	echo ""
 	case $selection in
-		1 ) df ;;
-		2 ) free ;;
-		0 ) exit ;;
-		* ) echo "please enter 1, 2 or 0"
+		1 ) df ; press_enter ;;
+		2 ) free ; press_enter ;;
+		0 ) exit ; press_enter ;;
+		* ) echo "please enter 1, 2 or 0" ; press_enter
 	esac
 done
