@@ -1,0 +1,32 @@
+#!/bin/bash
+set -x
+count=0
+for i in $(cat ~/.vimrc); do
+	count=$((count + 1))
+#	echo "Word $count ($i) contains $(echo -n $i | wc -c) characters"
+done
+
+
+for i in "$@"; do
+	echo $i
+done
+
+for filename in "$@"; do
+	result=
+	if [ -f "$filename" ]; then
+		result="$filename is a regular file."
+	else
+		if [ -d "$filename" ]; then
+			result="$filename is a directory."
+		fi
+	fi
+
+	if [ -w "$filename" ]; then
+		result="$filename and is writable."
+	else
+		result="$filename and is not writable."
+	fi
+	echo "$result"
+done
+
+set +x
