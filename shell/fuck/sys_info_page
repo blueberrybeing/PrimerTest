@@ -20,7 +20,6 @@ report_dis_space(){
 	_EOF_
 	return
 }
-
 report_home_space(){
 	if [[$(id -u) -eq 0]]; then
 		cat <<- _EOF_
@@ -35,7 +34,9 @@ report_home_space(){
 	fi
 	return
 }
-fuckfjdkfjdkfjksdjf!
-lsoireriueajhfjasf!
-holsy shf ds!
-# This is a test
+dfdkfjksdfjksjfskdjf
+#fuck
+$$$$$;
+
+
+
