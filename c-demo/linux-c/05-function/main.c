@@ -18,10 +18,22 @@ void print_logarithm(double x)
 
 int is_even(int x)
 {
+	/*
 	if(x % 2 == 0)
 		return 1;
 	else
 		retrun 0;
+	*/
+	return !(x % 2);
+}
+
+int is_leap_year(int year)
+{
+	if(year % 4 == 0 && year % 100 != 0)
+		return 1;
+	if(year % 400 == 0)
+		return 1;
+	return 0;
 }
 
 int main(void)
