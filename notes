@@ -30,5 +30,3 @@ text ~/Documents/*.txt {a,b} foo 4 jj
 jj@jjUbuntu:~/Documents/pics$ echo 'text ~/Documents/*.txt {a,b} $(echo foo) $((2+2)) $USER'
 text ~/Documents/*.txt {a,b} $(echo foo) $((2+2)) $USER
 
-test branch
-test add
