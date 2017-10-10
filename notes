@@ -32,3 +32,4 @@ text ~/Documents/*.txt {a,b} $(echo foo) $((2+2)) $USER
 
 git test --desktop 002
 git test --desktop 003
+add feature2
